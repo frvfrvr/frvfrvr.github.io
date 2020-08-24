@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta name="description" content="Nimiq Basics 1: Establishing Consensus - https://nimiq.com/developers">
     <meta charset=utf-8 />
     <title>Nimiq Demo App</title>
-    <script type="text/javascript" src="https://cdn.nimiq.com/latest/nimiq.js"></script>
+
+    <!-- Load the Nimiq library -->
+    <script type="text/javascript" src="https://cdn.nimiq.com/v1.5/nimiq.js"></script>
     <script>
+       const $ = document.getElementById.bind(document);
+        const nimiq = {};
+
         function status(text) {
-            document.getElementById('message').textContent = text;
-            console.log(`Status: ${text}`);
+            $('message').textContent = text;
+        }
+
+        function onConsensusChanged(consensus) {
+            status(
+                consensus == Nimiq.Client.ConsensusState.ESTABLISHED
+                    ? 'Consensus established.'
+                    : 'Establishing consensus...'
+            );
+        }
+
+        async function onHeadChanged() {
+            const height = await nimiq.client.getHeadHeight();
+            $('height').textContent = height;
+
+            const { totalPeerCount, bytesReceived, bytesSent } = await nimiq.network.getStatistics();
+            $('network').textContent =
+                `${totalPeerCount} peers connected,
+                 ${bytesSent} bytes sent,
+                 ${bytesReceived} received.`;
+
+            console.log(`Now at height ${height} with ${totalPeerCount} peers and ${bytesSent}/${bytesReceived} bytes sent/received.`);
         }
 
         async function start() {
@@ -28,26 +51,24 @@
             // It will automatically connect to the network.
             const client = configBuilder.instantiateClient();
 
-            // Waiting for consensus to be establish
-            client.addConsensusChangedListener((consensus) => {
-                const message = consensus === Nimiq.Client.ConsensusState.ESTABLISHED
-                    ? 'Consensus established.'
-                    : 'Establishing consensus...'
+            // Store references
+            nimiq.client = client;
+            nimiq.network = client.network;
 
-                // Update displayed status
-                status(message);
-            });
-        };
+            // Event handlers
+            client.addConsensusChangedListener(onConsensusChanged);
+            client.addHeadChangedListener(onHeadChanged);
+        }
 
         // Start loading the Nimiq client library
         Nimiq.init(start);
     </script>
-</head>
 
+</head>
 <body>
     <h1>Nimiq Demo App</h1>
-    <div id="message">loading...</div>
-    <p><small>Press F12 to open console and see full log.</small><p>
+    <p>Status: <span id="message"></span></p>
+    <p>Current block height: <span id="height"></span></p>
+    <p>Network: <span id="network"></span></p>
 </body>
-
 </html>
