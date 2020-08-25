@@ -86,7 +86,7 @@
 			const transaction = new Nimiq.ExtendedTransaction(
 				nimiq.wallet.address,                           // sender address
 				Nimiq.Account.Type.BASIC,                       // and account type
-				Nimiq.Address.fromUserFriendlyAddress(address), // recipient address (error)
+				Nimiq.Address.fromUserFriendlyAddress(address), // recipient address
 				Nimiq.Account.Type.BASIC,                       // and type
 				Nimiq.Policy.coinsToLunas(amount),
 				0,                                              // fee
@@ -110,7 +110,7 @@
 				
 			 // create an extended transaction if a message is set, otherwise a basic transaction
 			const transaction = message.trim().length > 0
-			? await extendedTransaction() // error
+			? await extendedTransaction()
 			: await basicTransaction();
 
 			// Send to the Nimiq network
@@ -154,7 +154,7 @@
 					const amount = parseInt($('tx_amount').value);
 					const message = $('tx_message').value; // <- get the message
 
-					sendTransaction(recipient, amount, message); // error
+					sendTransaction(recipient, amount, message);
 						});
 			
 			
