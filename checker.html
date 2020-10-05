@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Let's check if ETH address of <i>mine</i> you've received is accurate</p>
+
+ETH address: <input type="text" id="myText" value="0x3f0561ecdbd3959821de8dcdb26272ca641bdbf0">
+
+<button type="button" onclick="myFunction()">Check ETH address</button>
+  
+<p id="demo1"></p>
+
+<hr>
+
+<p>Let's check if NIMIQ address of <i>mine</i> you've received is accurate</p>
+
+NIMIQ address: <input type="text" id="myNIM" value="NQ37 K4AE 3PB2 YL35 VN0H 1SG4 FG8P YK90 JCU0">
+
+<p>Let's prevent clipboard jacking! Re-check address carefully!</p>
+
+<button type="button" onclick="ee()">Check NIM address</button>
+  
+<p id="demo1"></p>
+
+<a href="https://frvfrvr.github.io/">Back to FRVfrvr homepage</a>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myText");
+  var defaultVal = x.defaultValue;
+  var currentVal = x.value;
+  
+  if (defaultVal == currentVal) {
+    document.getElementById("demo").innerHTML = "Sure matches my ETH address "
+    + x.defaultValue + " and " + x.value
+    + "<br>You're safe!";
+  } else {
+    document.getElementById("demo").innerHTML = "Wrong! The correct ETH address is " + defaultVal
+    + "<br>What you pasted: " + currentVal + "<br>Be careful of clipboard jacking!";
+  }
+}
+
+function ee() {
+  var y = document.getElementById("myNIM");
+  var yVal = y.yValue;
+  var yCVal = y.value;
+  
+  if (yVal == yCVal) {
+    document.getElementById("demo1").innerHTML = "Sure matches my NIMIQ address "
+    + y.yValue + " and " + y.value
+    + "<br>You're safe!";
+  } else {
+    document.getElementById("demo1").innerHTML = "Wrong! The correct NIMIQ address is " + yVal
+    + "<br>What you pasted: " + yCVal + "<br>Be careful of clipboard jacking!";
+  }
+}
+</script>
+
+</body>
