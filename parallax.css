@@ -48,7 +48,6 @@ body {
     z-index: 2;
     color: #ffffff;
     text-align: center;
-    align: center;
 }
 
 .parallax__layer__0 {
@@ -93,7 +92,7 @@ body {
     font-size: 10vw;
     /* Responsive font size */
     font-weight: bold;
-    margin: auto;
+    margin: 0 auto;
     margin-right: auto;
     margin-left: auto;
     display: block;
