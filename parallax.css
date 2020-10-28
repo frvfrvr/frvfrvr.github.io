@@ -5,6 +5,8 @@
 html,
 body {
     background-color: #ffffff;
+    background-image: url("https://media.istockphoto.com/vectors/white-clouds-blue-sky-seamless-pattern-vector-id621486702?b=1&k=6&m=621486702&s=612x612&w=0&h=7hyef78i8xyNHKQmlx1yt-ellq-b-TUVGRmn2PnTDNM=");
+    background-repeat: auto;
 }
 
 .parallax {
@@ -46,6 +48,7 @@ body {
     z-index: 2;
     color: #ffffff;
     text-align: center;
+    align: center;
 }
 
 .parallax__layer__0 {
@@ -83,32 +86,30 @@ body {
     transform: translateZ(0px) scale(1);
 }
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 30px;
+.text {
+    background-color: white;
+    color: black;
+    font-family: arial;
+    font-size: 10vw;
+    /* Responsive font size */
+    font-weight: bold;
+    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    /* Center the text container */
+    padding: 10px;
+    width: 50%;
     text-align: center;
-}
-
-.flex-item-left {
-    background-color: #f1f1f1;
-    padding: 10px;
-    flex: 50%;
-}
-
-.flex-item-right {
-    background-color: dodgerblue;
-    padding: 10px;
-    flex: 50%;
-}
-
-
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
-
-@media (max-width: 800px) {
-    .flex-item-right,
-    .flex-item-left {
-        flex: 100%;
-        align-items: center;
-    }
+    /* Center text */
+    position: absolute;
+    /* Position text */
+    top: 50%;
+    /* Position text in the middle */
+    left: 50%;
+    /* Position text in the middle */
+    transform: translate(-50%, -50%);
+    /* Position text in the middle */
+    mix-blend-mode: screen;
+    /* This makes the cutout text possible */
 }
