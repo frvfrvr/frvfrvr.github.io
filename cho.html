@@ -2,36 +2,21 @@
 <html>
 
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/@nimiq/style@v0.8.3/nimiq-style.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono&text=0123456789ABCDEFGHJKLMNPQRSTUVXY%20" rel="stylesheet">
+    <script src="js.cookie-2.2.1.min.js"></script>
     <script>
-        /* The parameters of the function above are the name of the cookie (cname), the value of the cookie (cvalue), and the number of days until the cookie should expire (exdays).
-                                                        The function sets a cookie by adding together the cookiename, the cookie value, and the expires string.*/
         function setCookie(cname, cvalue, exdays) {
             var d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toGMTString();
+            var expires = "expires=" + d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         }
 
-        /*Take the cookiename as parameter (cname).
-
-Create a variable (name) with the text to search for (cname + "=").
-
-Decode the cookie string, to handle cookies with special characters, e.g. '$'
-
-Split document.cookie on semicolons into an array called ca (ca = decodedCookie.split(';')).
-
-Loop through the ca array (i = 0; i < ca.length; i++), and read out each value c = ca[i]).
-
-If the cookie is found (c.indexOf(name) == 0), return the value of the cookie (c.substring(name.length, c.length).
-
-If the cookie is not found, return "".
-        
-         */
-
         function getCookie(cname) {
             var name = cname + "=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var ca = decodedCookie.split(';');
+            var ca = document.cookie.split(';');
             for (var i = 0; i < ca.length; i++) {
                 var c = ca[i];
                 while (c.charAt(0) == ' ') {
@@ -43,33 +28,338 @@ If the cookie is not found, return "".
             }
             return "";
         }
+        clicked = false;
+        var random = new Array();
 
-        /*Last, we create the function that checks if a cookie is set.
+        random[0] = "https://hub.nimiq-testnet.com/cashlink/#o7PkqXS8YTbTHnWw5qwpQHRJzKDLBQRPJP79V3lbaosAAAAAAAAnEAdUaGFua3Mx"
+        random[1] = "https://www.yahoo.com/"
+        random[2] = "https://www.duckduckgo.com/"
+        random[3] = "https://www.nimiq.com/"
+        random[4] = "https://www.w3schools.com/"
+        random[5] = "https://www.google.com/"
+        random[6] = "https://www.google.com/"
+        random[7] = "https://www.google.com/"
+        random[8] = "https://www.google.com/"
+        random[9] = "https://www.google.com/"
+        random[10] = "https://www.google.com/"
+        random[11] = "https://www.google.com/"
+        random[12] = "https://www.google.com/"
+        random[13] = "https://www.google.com/"
 
-If the cookie is set it will display a greeting.
 
-If the cookie is not set, it will display a prompt box, asking for the name of the user, and stores the username cookie for 365 days, by calling the setCookie function:
-         */
-        function checkCookie() {
-            var user = getCookie("username");
-            if (user != "") {
-                alert("Welcome again " + user);
-            } else {
-                user = prompt("Please enter your name:", "");
-                if (user != "" && user != null) {
-                    setCookie("username", user, 30);
+
+        var arr = []
+
+        function countd() {
+            var timeleft = 5;
+            var downloadTimer = setInterval(function() {
+                if (timeleft <= 0) {
+                    clearInterval(downloadTimer);
+                    document.getElementById("countdown").innerHTML = "All aboard!";
+                } else {
+                    document.getElementById("countdown").innerHTML = "Ship departing in " + timeleft;
                 }
+                timeleft -= 1;
+            }, 1000);
+        }
+
+
+
+        function enablebut() {
+            document.getElementById("social").disabled = false;
+            document.getElementById("social1").disabled = false;
+            document.getElementById("social2").disabled = false;
+        }
+
+        function myFunction() {
+            document.getElementById("status").innerHTML = "Welcome to <br> Crypto House Oasis! <br> Enjoy this Cashlink!";
+            enablebut();
+            countd();
+            document.cookie = "clicked=yes; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+        // document.cookie = "clicked=yes; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+        function checkCookie() {
+            var clicked = getCookie("clicked");
+            if (clicked == "yes") {
+                enablebut();
+                document.getElementById("status").innerHTML = "Nimiq Cashlinks have been taken already <br> (either you or the others) <br> come back next giveaway!";
+            } else {
+                document.getElementById("status").innerHTML = "Welcome to <br> Crypto House Oasis! <br> Enjoy this Cashlink!";
+                countd();
+                setTimeout(randomlink, 8000);
+                document.cookie = "clicked=yes";
             }
         }
 
-        // for button
+        setTimeout(myFunction, 3000);
 
-        function myFunction() {
-            alert('Hello');
+
+
+        function randomlink() {
+            var randomUrl = random[Math.ceil(Math.random() * 12 + 1)]
+            console.log(arr.indexOf(randomUrl))
+            if (arr.indexOf(randomUrl) > -1) {
+                randomlink();
+            };
+            console.log(randomUrl);
+            window.location = randomUrl;
+            arr[arr.length] = randomUrl;
         }
     </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*! Hint.css - v2.5.1 - 2018-11-17
+             * http://kushagragour.in/lab/hint/
+             * Copyright (c) 2018 Kushagra Gour */
+        /*-------------------------------------*\
+                HINT.css - A CSS tooltip library
+            \*-------------------------------------*/
+        /**
+             * HINT.css is a tooltip library made in pure CSS.
+             *
+             * Source: https://github.com/chinchang/hint.css
+             * Demo: http://kushagragour.in/lab/hint/
+             */
+        /**
+             * Adapted by Nimiq for simplicity
+             */
+        
+        body {
+            background-color: nq-blue;
+            text-align: center;
+        }
+        
+        .hint {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hint:before,
+        .hint:after {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 1000000;
+            pointer-events: none;
+            bottom: 100%;
+            left: 50%;
+        }
+        
+        .hint:before {
+            content: '';
+            position: absolute;
+            background: transparent;
+            border: 6px solid transparent;
+            z-index: 1000001;
+            border-top-color: #383838;
+            margin-bottom: -11px;
+            left: calc(50% - 6px);
+        }
+        
+        .hint:after {
+            background: #383838;
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 2.25rem;
+            font-weight: bold;
+            line-height: 2.5rem;
+            white-space: nowrap;
+            border-radius: 4px;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            transform: translateX(-50%);
+            text-shadow: 0 -1px 0px black;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hint:hover:before,
+        .hint:hover:after {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .hint:hover:before {
+            -webkit-transform: translateY(-8px);
+            -moz-transform: translateY(-8px);
+            transform: translateY(-8px);
+        }
+        
+        .hint:hover:after {
+            -webkit-transform: translateX(-50%) translateY(-8px);
+            -moz-transform: translateX(-50%) translateY(-8px);
+            transform: translateX(-50%) translateY(-8px);
+        }
+        
+        .hint[aria-label]:after {
+            content: attr(aria-label);
+        }
+        /* END of hint.css */
+        
+        header {
+            text-align: center;
+            padding: 5rem 0 7rem;
+            margin-bottom: 5rem;
+        }
+        
+        .content {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+        }
+        
+        .links {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .table-of-contents {
+            font-size: 2.25rem;
+        }
+        
+        .nq-card-header h1 a {
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+        
+        .nq-card-header h1 a:hover::before {
+            content: '#';
+            position: absolute;
+            left: -1em;
+            opacity: 0.6;
+        }
+        
+        #contents,
+        #installation,
+        #cards,
+        #footer {
+            padding: 2rem;
+        }
+        
+        #footer {
+            text-align: center;
+            padding-bottom: 4rem !important;
+        }
+        
+        #cards>.nq-card {
+            margin: 10rem auto;
+        }
+        
+        .code {
+            white-space: pre;
+            font-size: 1.75rem;
+            line-height: 3rem;
+            font-family: monospace;
+            border: 1px solid var(--nimiq-card-border-color);
+            border-radius: 0.5rem;
+            padding: 3rem 4rem;
+            background: ivory;
+            color: dimgray;
+            overflow: auto;
+            border-top: solid 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .code:not(:last-child) {
+            border-bottom: solid 1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .nq-card .code {
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+        }
+        
+        .code+.code {
+            border-top: none;
+        }
+        
+        .code:last-child {
+            border-bottom: none;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        
+        .text-colors {
+            font-weight: bold;
+        }
+        
+        .background-colors {
+            overflow: auto;
+        }
+        
+        .color-swatch {
+            padding: 4rem 3rem;
+            margin: 0 3rem 3rem 0;
+            border-radius: 1rem;
+            width: 28rem;
+            float: left;
+            font-weight: bold;
+        }
+        
+        .rounded-padding {
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        
+        #small-buttons .nq-button-s,
+        #pill-buttons .nq-button-pill {
+            margin-bottom: 0.75rem;
+        }
+        
+        .nq-input-s {
+            font-size: 2rem;
+        }
+        
+        .icons {
+            font-size: 5rem;
+        }
+        
+        .icons .nq-icon {
+            margin: 0.95rem;
+        }
+        
+        .icons .nq-icon.ledger {
+            width: 24rem;
+        }
+        
+        .icons:last-child {
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        
+        @media (max-width: 450px) {
+            #contents,
+            #installation,
+            #cards,
+            #footer {
+                padding: 1rem;
+            }
+            .code {
+                padding: 3rem;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <button onclick="setTimeout(myFunction, 3000)">Try it</button>
+<body class="nq-gold-bg">
+    <header id="top">
+        <img src="cho-map.gif">
+        <br>
+
+    </header>
+    <div class="nq-card">
+        <div class="nq-card-header">
+            <h1 class="nq-h1" id="status">...</h1><br>
+            <div id="countdown"></div>
+        </div>
+
+    </div><br>
+    <!--<p style="text-align: center; color: black; font-weight: bold; font-size: 150%;" id="status">...</p>-->
+    <button onclick="window.location.href = 'https://www.nimiq.com/';" class="nq-button light-blue inverse" id="social" disabled>Learn more about Nimiq</button>
+    <button onclick="window.location.href = 'https://app.rarible.com/frvfrvr/created';" class="nq-button-s" id="social1" disabled>Visit FRVfrvr's Rarible</button><br><br>
+    <button onclick="window.location.href = 'https://twitter.com/blockchainshay';" class="nq-button-s" id="social2" disabled>More giveaways on BlockchainShay's Twitter</button><br>
+
+
+
 </body>
