@@ -32,19 +32,18 @@
         var random = new Array();
 
         random[0] = "https://hub.nimiq-testnet.com/cashlink/#o7PkqXS8YTbTHnWw5qwpQHRJzKDLBQRPJP79V3lbaosAAAAAAAAnEAdUaGFua3Mx"
-        random[1] = "https://www.yahoo.com/"
-        random[2] = "https://www.duckduckgo.com/"
+        random[1] = "https://hub.nimiq-testnet.com/cashlink/#mFz39mZLvW4lzRekaop_oGF_MKxlzrMpYJ2dkTMO6KYAAAAAAAAnEA=="
+        random[2] = "https://hub.nimiq-testnet.com/cashlink/#kTiXVEzC9brTsttMG-QmVhSS8axcpgx8ULdcz1yNwHsAAAAAAAAnEA=="
         random[3] = "https://www.nimiq.com/"
-        random[4] = "https://www.w3schools.com/"
-        random[5] = "https://www.google.com/"
-        random[6] = "https://www.google.com/"
-        random[7] = "https://www.google.com/"
-        random[8] = "https://www.google.com/"
-        random[9] = "https://www.google.com/"
-        random[10] = "https://www.google.com/"
-        random[11] = "https://www.google.com/"
-        random[12] = "https://www.google.com/"
-        random[13] = "https://www.google.com/"
+        random[4] = "https://hub.nimiq-testnet.com/cashlink/#_4YK2dZVmSZkTFkHH2MTgehblXEH52lKSgi6NEQFsuEAAAAAAAAnEA=="
+        random[5] = "https://hub.nimiq-testnet.com/cashlink/#_4YK2dZVmSZkTFkHH2MTgehblXEH52lKSgi6NEQFsuEAAAAAAAAnEA=="
+        random[6] = "https://hub.nimiq-testnet.com/cashlink/#_4YK2dZVmSZkTFkHH2MTgehblXEH52lKSgi6NEQFsuEAAAAAAAAnEA=="
+        random[7] = "https://hub.nimiq-testnet.com/cashlink/#_4YK2dZVmSZkTFkHH2MTgehblXEH52lKSgi6NEQFsuEAAAAAAAAnEA=="
+        random[8] = "https://hub.nimiq-testnet.com/cashlink/#_4YK2dZVmSZkTFkHH2MTgehblXEH52lKSgi6NEQFsuEAAAAAAAAnEA=="
+        random[9] = "https://hub.nimiq-testnet.com/cashlink/#_4YK2dZVmSZkTFkHH2MTgehblXEH52lKSgi6NEQFsuEAAAAAAAAnEA=="
+        random[10] = "https://hub.nimiq-testnet.com/cashlink/#_4YK2dZVmSZkTFkHH2MTgehblXEH52lKSgi6NEQFsuEAAAAAAAAnEA==ttps://www.google.com/"
+        random[12] = "https://hub.nimiq-testnet.com/cashlink/#_4YK2dZVmSZkTFkHH2MTgehblXEH52lKSgi6NEQFsuEAAAAAAAAnEA=="
+        random[13] = "https://hub.nimiq-testnet.com/cashlink/#_4YK2dZVmSZkTFkHH2MTgehblXEH52lKSgi6NEQFsuEAAAAAAAAnEA=="
 
 
 
@@ -55,7 +54,7 @@
             var downloadTimer = setInterval(function() {
                 if (timeleft <= 0) {
                     clearInterval(downloadTimer);
-                    document.getElementById("countdown").innerHTML = "All aboard!";
+                    document.getElementById("countdown").innerHTML = "All aboard! Test";
                 } else {
                     document.getElementById("countdown").innerHTML = "Ship departing in " + timeleft;
                 }
@@ -72,7 +71,7 @@
         }
 
         function myFunction() {
-            document.getElementById("status").innerHTML = "Welcome to <br> Crypto House Oasis! <br> Enjoy this Cashlink!";
+            document.getElementById("status").innerHTML = "Welcome to <br> Crypto House Oasis! <br> Enjoy this Test Cashlink!";
             enablebut();
             countd();
             document.cookie = "clicked=yes; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -83,9 +82,12 @@
             var clicked = getCookie("clicked");
             if (clicked == "yes") {
                 enablebut();
+                document.getElementById("body1").className = "nq-blue-bg";
+                document.getElementById("social1").className += " inverse";
+                document.getElementById("social2").className += " inverse";
                 document.getElementById("status").innerHTML = "Nimiq Cashlinks have been taken already <br> (either you or the others) <br> come back next giveaway!";
             } else {
-                document.getElementById("status").innerHTML = "Welcome to <br> Crypto House Oasis! <br> Enjoy this Cashlink!";
+                document.getElementById("status").innerHTML = "Welcome to <br> Crypto House Oasis! <br> Enjoy this Test Cashlink!";
                 countd();
                 setTimeout(randomlink, 8000);
                 document.cookie = "clicked=yes";
@@ -342,13 +344,13 @@
     </style>
 </head>
 
-<body class="nq-gold-bg">
+<body class="nq-gold-bg" id="body1">
     <header id="top">
         <img src="cho-map.gif">
         <br>
 
     </header>
-    <div class="nq-card">
+    <div class="nq-card" style="margin: 0 auto;">
         <div class="nq-card-header">
             <h1 class="nq-h1" id="status">...</h1><br>
             <div id="countdown"></div>
@@ -358,7 +360,7 @@
     <!--<p style="text-align: center; color: black; font-weight: bold; font-size: 150%;" id="status">...</p>-->
     <button onclick="window.location.href = 'https://www.nimiq.com/';" class="nq-button light-blue inverse" id="social" disabled>Learn more about Nimiq</button>
     <button onclick="window.location.href = 'https://app.rarible.com/frvfrvr/created';" class="nq-button-s" id="social1" disabled>Visit FRVfrvr's Rarible</button><br><br>
-    <button onclick="window.location.href = 'https://twitter.com/blockchainshay';" class="nq-button-s" id="social2" disabled>More giveaways on BlockchainShay's Twitter</button><br>
+    <button onclick="window.location.href = 'https://twitter.com/blockchainshay';" class="nq-button-s" id="social2" disabled>More giveaways on BlockchainShay's Twitter</button><br><br><br>
 
 
 
