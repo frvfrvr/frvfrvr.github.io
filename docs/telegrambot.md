@@ -18,7 +18,7 @@ At this point, there are times the assigned tipper is offline when everyone need
 
 Enter this bot.
 
-![Buddybot]({{site.baseurl}}/https://github.com/frvfrvr/frvfrvr.github.io/blob/master/images/tgbot1.png)
+![Buddybot](https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/images/tgbot1.png)
 
 
 I planned this as early as January and even went to make it until March.
