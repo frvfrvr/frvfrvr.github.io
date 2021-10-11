@@ -1,13 +1,8 @@
-theme: jekyll-theme-minimal
-title: FRVfrvr
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
-  <br><br>
-  Second description 
-  <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
-  
-logo: https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/images/logo%20y.png
+# Setup
+title: Poole
+tagline: The Jekyll Butler
+url: https://getpoole.com
+paginate: 1
 baseurl: ""
 permalink: pretty
 
@@ -16,8 +11,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-sitemap
-  
+
 # Optimize Jekyll
 exclude:
   - .editorconfig
@@ -39,6 +33,9 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: FRVfrvr
-  url: https://github.com/frvfrvr/
+  name: Mark Otto
+  url: https://twitter.com/mdo
+  email: markdotto@gmail.com
 
+# Custom vars
+version: 3.0.0
