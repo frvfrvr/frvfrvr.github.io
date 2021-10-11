@@ -4,7 +4,7 @@ title: Userbot a key to empower Telegram groups
 description: Host events, build a game that keeps people playing everyday, form a group to assist on outreach.
 ---
 ```
-It's been a while since I've been assigned to manage a community and did an outreach through games and events. I've been told that it's a relaxed job, don't need to do full time on it. 
+It's been a while since I've been assigned to manage a community and did an outreach through games and events. I've been told that it's a relaxed job, don't need to do full time on it.  .
 
 Yet I was eager to accomplish one goal - **to build a self-sustaining local community.**
 
