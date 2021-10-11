@@ -25,7 +25,7 @@ Enter this bot.
 ![Buddybot](https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/images/tgbot1.png)
 
 
-I planned this as early as January and even went to make it until March.
+I planned this as early as January and even went to make it until March. 
 
 Bots were a solution to this problem, but during the manual run, we use a Tip bot to tip rewards. Bots can't communicate to Tip bot straight, then I've read this [article](https://telegra.ph/How-a-Userbot-superacharges-your-Telegram-Bot-07-09). Userbots made this possible. I used a Python library Pyrogram for its very readable scripts and easy to read documentation. Developed the whole March. I built a working prototype that tips users automatically upon reaching points. Then with the help of testers (now assigned as game moderators), I've added anti-looting measures such as minimum message to reach daily before playing. This pushed me to complete it as early as April when users found something suspicious in particular players just went to play and never talk to anyone. It gives a bad vibe that group was just a game center, away from being a friendly community. I've talked them out and they left without repurcussions, if anything, one person donated back the rewards. 
 
