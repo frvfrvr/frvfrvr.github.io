@@ -1,115 +1,81 @@
-// Typography
-//
-// Headings, body text, lists, and other misc typographic elements.
-
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--heading-color);
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-}
-
-h4, h5, h6 {
-  margin-top: 1rem;
+body {
   font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  zoom: 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+header p strong {
+    text-transform: uppercase;
 }
 
-ul, ol, dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
+.post-title {
+    background: black;
+    margin: 10rem 0;
+    color: white;
+    padding: 2rem;
+    font-weight: bold;
 }
 
-dt {
+a,a:visited {
+  color: black;
   font-weight: bold;
-}
 
-dd {
-  margin-bottom: .5rem;
-}
-
-hr {
-  position: relative;
-  margin: var(--spacer-2) 0;
-  border: 0;
-  border-top: 1px solid var(--border-color);
-}
-
-abbr {
-  font-size: 85%;
-  font-weight: bold;
-  color: var(--gray-600);
-  text-transform: uppercase;
-
-  &[title] {
-    cursor: help;
-    border-bottom: 1px dotted var(--border-color);
+  &:hover {
+    color: dodgerblue;
   }
+}
+
+a.active {
+    background: black;
+    padding: 0.5rem;
+    color: white;
+    font-weight: bold;
 }
 
 blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
-  color: var(--gray-500);
-  border-left: .25rem solid var(--border-color);
+  background: #f9f9f9;
+  border-left: 5px solid black;
+  font-size: 120%;
+  margin: 2rem 0;
+  padding: 1rem;
 
-  p:last-child {
-    margin-bottom: 0;
+  p {
+    margin: 0;
   }
 
-  @media (min-width: 30em) {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
+  footer {
+    font-size: 90%;
+    margin: 1rem 0 0 0;
   }
 }
 
-figure {
-  margin: 0;
+dl {
+  dt {
+    margin-bottom: 0.5rem;
+  }
+  dd {
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
 }
 
-
-// Markdown footnotes
-//
-// See the example content post for an example.
-
-// Footnote number within body text
-a[href^="#fn:"],
-// Back to footnote link
-a[href^="#fnref:"] {
-  display: inline-block;
-  margin-left: .1rem;
-  font-weight: bold;
+code, pre {
+	font-family: San Francisco Mono,Monaco,"Consolas","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+	font-size: 92%;
 }
 
-// List of footnotes
-.footnotes {
-  margin-top: 2rem;
-  font-size: 85%;
+pre {
+  background: black;
+  color: white;
+  overflow: auto;
+  padding: 1em;
+  width: 100%;
 }
 
-// Custom type
-//
-// Extend paragraphs with `.lead` for larger introductory text.
-
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+.date {
+  opacity: 0.6;
 }
