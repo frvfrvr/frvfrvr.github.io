@@ -8,7 +8,6 @@ description: > # your text below (remove <br> elements if you don't need line br
   <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
   
 logo: https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/images/logo%20y.png
-theme: jekyll-theme-minimal
 baseurl: ""
 permalink: pretty
 
