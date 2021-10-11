@@ -3,7 +3,7 @@ layout: post
 title: Userbot a key to empower Telegram groups
 description: Host events, build a game that keeps people playing everyday, form a group to assist on outreach.
 ---
-```
+
 It's been a while since I've been assigned to manage a community and did an outreach through games and events. I've been told that it's a relaxed job, don't need to do full time on it.  .
 
 Yet I was eager to accomplish one goal - **to build a self-sustaining local community.**
@@ -33,4 +33,4 @@ In April, I added more games from my previous events so it will be faster to use
 
 A week before release, I've done a dry run to see the workings of the bot and bug hunting.
 At April 25, the bot has become stable and ready to host games with help of community.
-```
+
