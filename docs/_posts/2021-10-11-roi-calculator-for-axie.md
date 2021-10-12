@@ -3,7 +3,7 @@ layout: post
 title: ROI Calculator for Axie Infinity
 ---
 
-![](assets/20211012_142643_axie-infinity-1200x600.jpg)
+![](https://github.com/frvfrvr/frvfrvr.github.io/blob/b4d9863fdc3d4623ef89d0bb266afd3d895578c5/docs/_posts/assets/20211012_142643_axie-infinity-1200x600.jpg)
 
 [**Axie Infinity**](https://axieinfinity.com/) is one of the hottest NFT game right now and it wasn't only for its cute oblong monsters but also one of the first play-to-earn games in Ethereum blockchain.
 
@@ -17,17 +17,17 @@ Later, you'll be window shopping for floor or good Axies and want to find out ho
 
 If you do not own three Axies yet, you can go look for them and calculate the prices using our ROI calculator:
 
-![](assets/20211012_134341_axie_quote.png)
+![](https://github.com/frvfrvr/frvfrvr.github.io/blob/b4d9863fdc3d4623ef89d0bb266afd3d895578c5/docs/_posts/assets/20211012_134341_axie_quote.png)
 
 * Find the best Axies that fit your budget in [Axie Marketplace](https://marketplace.axieinfinity.com/axie). 
 
-  ![](assets/20211012_134852_roi_calc.png)
+  ![](https://github.com/frvfrvr/frvfrvr.github.io/blob/b4d9863fdc3d4623ef89d0bb266afd3d895578c5/docs/_posts/assets/20211012_134852_roi_calc.png)
 * In our [**Axie ROI Calculator**](https://frvfrvr.github.io/axie/axie), input their WETH prices and date you've purchased (or plan to purchase) the third Axie then fill the average SLP earned per day. If unsure, **70-75 SLP** is the minimum quota for most scholars and casual players.
 
-  ![](assets/20211012_135904_roi_calc2.png)
+  ![](https://github.com/frvfrvr/frvfrvr.github.io/blob/b4d9863fdc3d4623ef89d0bb266afd3d895578c5/docs/_posts/assets/20211012_135904_roi_calc2.png)
 * Once everything is filled, click **Calculate ROI**.
 
-  ![](assets/20211012_140120_roi_calc3.png)
+  ![](https://github.com/frvfrvr/frvfrvr.github.io/blob/b4d9863fdc3d4623ef89d0bb266afd3d895578c5/docs/_posts/assets/20211012_140120_roi_calc3.png)
 * You can see the estimated date of ROI and days it take to earn back what you've paid for, assuming consistency in the amount of earning SLP tokens per day.
 
 
