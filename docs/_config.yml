@@ -1,5 +1,5 @@
 site: frvfrvr
-url: https://frvfrvr.github.io
+url: https://frvfrvr.github.io/
 title: FRVfrvr
 description: FRVfrvr
 twitter:
@@ -66,3 +66,8 @@ defaults:
       path: "assets/images"
     values:
       image: true
+  - scope:
+      path: "_posts/assets"
+    values:
+      image: true
+
