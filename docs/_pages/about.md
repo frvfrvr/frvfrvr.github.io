@@ -3,19 +3,26 @@ layout: page
 title: About
 ---
 
-## Ultra - Super fast Jekyll theme 
+## FRVfrvr
 
-Super fast, minimal one-column portfolio/blog theme built for Jekyll. Theme weighs under <strong>2kb</strong>. Perfect for your personal website, blog and portfolio.
+Hi, I'm Francis!
 
 ### Key features
 
-- seo optimized
-- weighs under 2kb
-- portfolio/blog pages
-- AAA, 100/100 scores on Lighthouse, Gmetrix and Webpagetest
-- responsive
-- inline css
-- compressed css, html
-- sitemap
-- robots.txt
-- atom feed
+- 🌱 I’m currently learning 
+	- C
+	- Python (some Pandas, Matplotlib, etc.)
+	- Javascript
+	- Flask, Django
+	- XAMP
+	- SQL
+	- GDevelop
+
+- 🤔 I’m planning to learn
+	- Rust
+	- Godot (GDScript)
+
+[![frvfrvr's github stats](https://github-readme-stats.vercel.app/api?username=frvfrvr&count_private=true&show_icons=true&theme=radical&hide_rank=false)](https://github.com/frvfrvr/github-readme-stats)
+
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=frvfrvr)](https://github.com/frvfrvr/github-readme-stats)
