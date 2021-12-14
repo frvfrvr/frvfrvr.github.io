@@ -3,7 +3,7 @@ layout: project
 title: Axie ROI Calculator
 description: Calculate the Return-on-investment from bought Axies and SLP earnings
 summary: Yeah
-category: Project category
+category: Web
 ---
 
 ![](https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/docs/_posts/assets/20211012_142643_axie-infinity-1200x600.jpg)
