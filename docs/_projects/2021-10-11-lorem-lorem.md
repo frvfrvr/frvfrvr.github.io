@@ -1,0 +1,28 @@
+---
+layout: project
+title: Axie ROI Calculator
+description: Calculate the Return-on-investment from bought Axies and SLP earnings
+summary: Yeah
+category: Project category
+---
+
+![](https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/docs/_posts/assets/20211012_142643_axie-infinity-1200x600.jpg)
+
+[**Axie ROI calculator**](https://frvfrvr.github.io/axie/axie) is a tool for potential players looking to time the return on investment from gameplay rewards using their bought Axies.
+
+## Guide
+
+If you do not own three Axies yet, you can go look for them and calculate the prices using our ROI calculator:
+
+![](https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/docs/_posts/assets/20211012_134341_axie_quote.png)
+
+* Find the best Axies that fit your budget in [Axie Marketplace](https://marketplace.axieinfinity.com/axie). 
+
+  ![](https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/docs/_posts/assets/20211012_134852_roi_calc.png)
+* In our [**Axie ROI Calculator**](https://frvfrvr.github.io/axie/axie), input their WETH prices and date you've purchased (or plan to purchase) the third Axie then fill the average SLP earned per day. If unsure, **70-75 SLP** is the minimum quota for most scholars and casual players.
+
+  ![](https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/docs/_posts/assets/20211012_135904_roi_calc2.png)
+* Once everything is filled, click **Calculate ROI**.
+
+  ![](https://raw.githubusercontent.com/frvfrvr/frvfrvr.github.io/master/docs/_posts/assets/20211012_140120_roi_calc3.png)
+* You can see the estimated date of ROI and days it take to earn back what you've paid for, assuming consistency in the amount of earning SLP tokens per day.
