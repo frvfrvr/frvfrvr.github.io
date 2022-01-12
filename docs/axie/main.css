@@ -219,6 +219,7 @@ input {
   position: fixed;
   top: 0;
   width: 5%;
+  background-color: rgb(255, 255, 255);
   transition: 0.3s;
 }
 
