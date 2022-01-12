@@ -156,8 +156,7 @@ input {
   #background-image: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
-    ),
-    url("https://amymhaddad.s3.amazonaws.com/oriental-tiles.png");
+    );
   background-repeat: repeat;
   background-color: rgba(255, 255, 255, 0.048);
   color: rgb(0, 0, 0);
