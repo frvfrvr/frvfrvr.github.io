@@ -219,7 +219,7 @@ input {
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 5%;
   transition: 0.3s;
 }
 
@@ -228,7 +228,7 @@ input {
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 5%;
   background-color: rgb(0, 0, 0);
   transition: 0.3s;
 }
