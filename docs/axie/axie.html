@@ -64,77 +64,49 @@
                 Community-built ROI Calculator for solo players (non-scholar)
                 <input class="button is-rounded" id="acthis" onclick="window.location.href='https://marketplace.axieinfinity.com/profile/activity';" value="Check your Sale History (Axie Marketplace link)">
                 <script>
-          // darkmode toggle
-          var darkmode;
-          //localStorage.setItem("darkmode", JSON.stringify(darkmode));
-          darkmode = JSON.parse(localStorage.getItem("darkmode"));
-          const paragraph = document.getElementById("moonsun");
-          const element = document.body;
+        // darkmode toggle
+        var darkmode;
+        darkmode = JSON.parse(localStorage.getItem("darkmode"));
+        const paragraph = document.getElementById("moonsun");
+        const element = document.body;
 
-          function myFunction() {
-            //darkmode = !darkmode;
-            if (element.classList.contains("dark-mode")) {
-              element.classList.remove("dark-mode");
-              darkmode = false;
-              paragraph.classList.add("fa-moon");
-              paragraph.classList.remove("fa-sun");
-            } else {
-              element.classList.add("dark-mode");
-              darkmode = true;
-              paragraph.classList.remove("fa-moon");
-              paragraph.classList.add("fa-sun");
-            }
-            localStorage.setItem("darkmode", JSON.stringify(darkmode));
-            console.log(darkmode);
-            /*
- 
- 
- 
-  const element = document.body;
-  element.classList.toggle("dark-mode");
-  const paragraph = document.getElementById("moonsun");
-  if (document.getElementById("moonsun").classList.contains("fa-moon")) {
-    paragraph.classList.remove("fa-moon");
-    paragraph.classList.add("fa-sun");
-    //document.getElementById("moonsun").className = 'fas fa-moon';
-    console.log(paragraph.className);
-  } else {
-    paragraph.classList.add("fa-moon");
-    paragraph.classList.remove("fa-sun");
-    //document.getElementById("moonsun").className = 'fas fa-sun';
-    console.log(paragraph.className);
-  }
-  
-  
-  
-  if(element.classList.contains("dark-mode")) {
-        element.classList.remove("dark-mode");
-        darkmode = false;
-        paragraph.classList.add("fa-moon");
-        paragraph.classList.remove("fa-sun");
-    } else {
-        element.classList.add("dark-mode");
-        darkmode = true;
-        paragraph.classList.remove("fa-moon");
-        paragraph.classList.add("fa-sun");
-    }
-  */
-          }
-          if (!darkmode) {
-            darkmode = JSON.parse(localStorage.getItem("darkmode"));
+        function myFunction() {
+          //darkmode = !darkmode;
+          if (element.classList.contains("dark-mode")) {
+            element.classList.remove("dark-mode");
+            document.documentElement.style.background = ''; // `${darkmode? 'black' : ''}`
+            document.documentElement.style.transition = '0.3s';
+            darkmode = false;
             paragraph.classList.add("fa-moon");
             paragraph.classList.remove("fa-sun");
-            element.classList.remove("dark-mode");
-          }
-          if (darkmode) {
-            darkmode = JSON.parse(localStorage.getItem("darkmode"));
+          } else {
             element.classList.add("dark-mode");
-            if (document.getElementById("moonsun").classList.contains("fa-moon")) {
-              paragraph.classList.remove("fa-moon");
-              paragraph.classList.add("fa-sun");
-            }
+            document.documentElement.style.background = 'black';
+            document.documentElement.style.transition = '0.3s';
+            darkmode = true;
+            paragraph.classList.remove("fa-moon");
+            paragraph.classList.add("fa-sun");
           }
-        </script>
+          localStorage.setItem("darkmode", JSON.stringify(darkmode));
+        }
+        if (!darkmode) {
+          darkmode = JSON.parse(localStorage.getItem("darkmode"));
+          paragraph.classList.add("fa-moon");
+          paragraph.classList.remove("fa-sun");
+          element.classList.remove("dark-mode");
+        }
+        if (darkmode) {
+          darkmode = JSON.parse(localStorage.getItem("darkmode"));
+          element.classList.add("dark-mode");
+          if (document.getElementById("moonsun").classList.contains("fa-moon")) {
+            paragraph.classList.remove("fa-moon");
+            paragraph.classList.add("fa-sun");
+          }
+        }
+        document.documentElement.style.background = `${darkmode? '#000000' : ''}`;
+        document.documentElement.style.transition = '0.3s';
+        // End of darkmode toggle
+      </script>
 
             </p>
             <div class="columns">
