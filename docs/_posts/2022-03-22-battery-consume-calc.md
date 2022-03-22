@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Benchmarking Macbook Air (M1, 2020) with own tool
+title: Battery Benchmarking Macbook Air (M1, 2020) with own tool
 description: Using my tool coded in Python to benchmark battery consumption
 ---
 As of this writing, my battery health was at 99%, 8 battery cycles and in Normal condition since I received the laptop in mid January 2022. I was also using free version of Al Dente to limit my battery charge to 80%.
