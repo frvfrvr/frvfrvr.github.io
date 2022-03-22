@@ -31,7 +31,6 @@ Let's go to the M1 Macbook Air battery consumption benchmarks:
 - For battery cycles, testing on whole 7th battery cycle, from February 18 09:49:12AM to March 10 12:12:50PM. 20 days, 2 hours, 23 minutes, and 38 seconds. 95% idle, 5% active use.
 
 ![](https://i.imgur.com/75ZFPo1.png)
-
 ![](https://i.imgur.com/37vnYIP.png)
 
 This is the average time it took to consume 1% when I wrote this post.
