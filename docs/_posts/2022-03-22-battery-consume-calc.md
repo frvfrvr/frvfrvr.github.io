@@ -29,6 +29,7 @@ Let's go to the M1 Macbook Air battery consumption benchmarks:
 ![Average time it takes to charge](https://i.imgur.com/SBK0RsT.png)
 
 - For battery cycles, testing on whole 7th battery cycle, from February 18 09:49:12AM to March 10 12:12:50PM. 20 days, 2 hours, 23 minutes, and 38 seconds. 95% idle, 5% active use.
+  Here's a **[link](https://gist.githubusercontent.com/frvfrvr/c498ab67af8233dbb021f0ce894ef4d5/raw/4b05df92d0dd2ca413e93aea5ea09326d6057cc4/gistfile1.txt)** to the whole log for 7th battery cycle.
 
 ![](https://i.imgur.com/75ZFPo1.png)
 ![](https://i.imgur.com/37vnYIP.png)
