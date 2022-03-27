@@ -30,6 +30,7 @@ Let's go to the M1 Macbook Air battery consumption benchmarks:
 
 - For battery cycles, testing on whole 7th battery cycle, from February 18 09:49:12AM to March 10 12:12:50PM. 20 days, 2 hours, 23 minutes, and 38 seconds. 95% idle, 5% active use.
   Here's a **[link](https://gist.githubusercontent.com/frvfrvr/c498ab67af8233dbb021f0ce894ef4d5/raw/4b05df92d0dd2ca413e93aea5ea09326d6057cc4/gistfile1.txt)** to the whole log for 7th battery cycle.
+- UPDATE 03/28/2022 - I have made a new log for [**8th battery cycle**](https://gist.githubusercontent.com/frvfrvr/59433758dea41c5a4e3ec9c2b4e42a4f/raw/150ca9df6990b8ae1608859af1aa5129baad8b42/gistfile1.txt). Other than that, I have also made [**calculations for an estimated lifespan**](https://gist.githubusercontent.com/frvfrvr/59433758dea41c5a4e3ec9c2b4e42a4f/raw/150ca9df6990b8ae1608859af1aa5129baad8b42/gistfile2.txt) of my Macbook Air M1 with my current usage habit. *Spoiler: very long life.*
 
 ![](https://i.imgur.com/75ZFPo1.png)
 ![](https://i.imgur.com/37vnYIP.png)
@@ -42,4 +43,4 @@ These are the processes consuming a total of 8 GB out of 16 GB RAM and Brave Bro
 
 ![](https://i.imgur.com/1W79TKh.png)
 
-If you're interested to test the benchmark tool, you can check [my Github repository](https://github.com/frvfrvr/battery-consume-calc) and run the Python script. I will upload the binary builds later so you don't need to install Python specially for macOS Monterey users having Python not installed by default.
+If you're interested to test the benchmark tool, you can check [**my Github repository**](https://github.com/frvfrvr/battery-consume-calc) and run the Python script. I will upload the binary builds later so you don't need to install Python ~~specially for macOS Monterey users having Python not installed by default~~ only Python 2.7 was removed in macOS Monterey 12.3 so it's okay to try.
