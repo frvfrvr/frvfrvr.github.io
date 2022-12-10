@@ -1,7 +1,8 @@
+---
 layout: post
 title: My Neo/Vim Setup for Debian (with Neovim 0.8+)
 description: because all the Neovim guides I found had steps exclusive to Ubuntu.
----------------------------------------------------------------------------------
+---
 
 Hello Vim newcomers and Debian users,
 
