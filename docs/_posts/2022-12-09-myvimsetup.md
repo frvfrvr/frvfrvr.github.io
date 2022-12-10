@@ -12,7 +12,14 @@ Second, The OS for VPS I use is Debian 11 "Bullseye" so this is the same barebon
 
 Configuring Vim (and Neovim) took me 2 days to match my VS Code settings, it felt like a project itself.
 
-Before the first step, I like to inform that the version of Neovim from `sudo apt-get install neovim` is [0.4.4-1](https://packages.debian.org/bullseye/neovim) so not all plugins you want may not work best. If your Debian has this version of Neovim installed, it has to be removed (`sudo apt remove neovim`).
+Before the first step, I like to inform that the version of Neovim from 
+```bash
+sudo apt-get install neovim
+``` 
+is [0.4.4-1](https://packages.debian.org/bullseye/neovim) so not all plugins you want may not work best. If your Debian has this version of Neovim installed, it has to be removed:
+```bash
+sudo apt remove neovim
+```
 
 Hope this tutorial helps and saves you from hours of Googling.
 
@@ -28,7 +35,11 @@ However, when I followed this step from Neovim repo, I encountered these dpkg-de
 
 ![](https://i.imgur.com/muGeT6a.png)
 
-Here's a workaround: `sudo dpkg -i --force-overwrite ./nvim-linux64.deb` then `sudo apt -f install`
+Here's a workaround: 
+```bash
+sudo dpkg -i --force-overwrite ./nvim-linux64.deb
+sudo apt -f install
+```
 
 Thanks [StackOverflow](https://askubuntu.com/questions/1062171/dpkg-deb-error-paste-subprocess-was-killed-by-signal-broken-pipe). I was hesitant because of `--force-overwrite` but it worked. A normal .deb install didn't work even if previous Neovim was already removed.
 
