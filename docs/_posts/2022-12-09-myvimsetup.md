@@ -17,7 +17,7 @@ Hope this tutorial helps and saves you from hours of Googling.
 
 **Step 1.** Download the .deb package from latest stable build of Neovim Github repository. Convenient if done in home directory (`cd $HOME`)
 
-```
+```bash
 curl -L -O "https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb"
 ```
 
@@ -43,7 +43,7 @@ This happened in Neovim 0.4.4-1. Here's my setup.
 
 For *.config/nvim/init.vim*: Obtained from `:help nvim-from-vim`
 
-```
+```vim
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
@@ -51,7 +51,7 @@ source ~/.vimrc
 
 For *.vimrc*: If you came from `vimtutor`, you may have this somewhere:
 
-```
+```vim
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 ```
@@ -65,7 +65,7 @@ if !has('nvim')
 endif
 ```
 
-Condition if it's not running Neovim, Vim defaults will load.
+Condition if it's not running Neovim, Vim defaults will load.  
 Here's my vim-plug setup example in *.vimrc*:
 
 ```vim
@@ -88,7 +88,7 @@ call plug#end()
 
 ```
 
-As you see, different plugins need minimum version of Vim or Neovim, take [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim) for example. Its README says, "Make sure use vim >= 8.1.1719 or neovim >= 0.4.0." The `!has('nvim')` syntax is to ensure it is not running Neovim and the *vim* other than Neovim is running version higher than and not equal to 8.0.
+As you see, different plugins need minimum version of Vim or Neovim, take [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim) for example. Its README says, "Make sure use vim >= 8.1.1719 or neovim >= 0.4.0." The `(!has('nvim') && v:version > 800)` syntax is to ensure it is not running Neovim and the *vim* other than Neovim is running version higher than and not equal to 8.0.
 
 The version scheming between these two Vims are different, check yours by typing `:echo v:version` from Normal mode. The `0.4.4` in Neovim could mean `404` and `8.2` in Vim could mean `802`.
 
