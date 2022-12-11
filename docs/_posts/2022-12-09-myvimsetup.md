@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My Neo/Vim Setup for Debian (with Neovim 0.8+)
+title: How to install latest version (0.8+) of Neovim on Debian instead of apt-get
 description: because all the Neovim guides I found had steps exclusive to Ubuntu.
 ---
 
