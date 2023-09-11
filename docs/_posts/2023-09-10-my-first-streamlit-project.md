@@ -34,19 +34,25 @@ Finally after...
 - planning a web scraping routine,
 - recording actions in Selenium IDE,
 - exporting them in Python unittest script,
-- following a Selenium setup tutorial, modifying the script to suit my needs, no more Pytest classes just straight to assign driver to WebDriver and go scrape.
+- following a Selenium setup tutorial, modifying the script to suit my needs, no more Pytest classes just straight to assign driver to WebDriver and go scrape, and added WebDriverWait until element load.
 - I found downloading latest version of WebDriver hassle and solved it with WebDriver-manager module.
 
-I can ...
+I can build a Streamlit app on top of this. I imagined what UI looked like for web extractor app and placed widgets with help of [its cheatsheet](https://docs.streamlit.io/library/cheatsheet). I looked for [similar](https://github.com/snehankekre/streamlit-selenium-chrome) [implementations](https://github.com/Franky1/Streamlit-Selenium) that utilized Selenium in Streamlit. Thanks to them, I also applied [caching](https://docs.streamlit.io/library/api-reference/performance/st.cache_data) to web extracting functions after initial test was slow due to loading the functions of same variables from the start instead of loading the result of those functions. I also ran into issues in exporting the result data to CSV but the Excel export worked alright so I published it to Community Cloud. The extraction mode has Simple and Advanced. I saved the other missing details for Advanced mode which is not available yet as of this writing. Last I added [external dependencies](https://docs.streamlit.io/streamlit-community-cloud/deploy-your-app/app-dependencies) for Selenium such as Chromium and its WebDriver to `packages.txt` along the required modules in `requirements.txt`.
 
+Upon publishing to Community Cloud, the first issue I encountered was Chromium and Webdriver version mismatch. This is common issue that was why I used Webdriver-manager module for this. That was also why it still had a mismatch. In my local machine (*yes it works on my machine*), I installed an older version of Chrome to match with what WDM has.
 
+![](https://i.imgur.com/o9zbfRs.png)
 
+I checked the module's source code itself and saw that source for ChromeDriver binaries is outdated and now in newer site with JSON endpoints. I tried figuring it out to keep updated without WDM until I found [chromedriver-py](https://github.com/breuerfelix/chromedriver-py). Its code has the latest site as its source and it worked out. I replaced WDM with it in `requirements.txt` afterwards.
+
+Another issue I encountered was the extraction routine might be so fast it stopped responding after not waiting to load the next city profile page. It already had waiting mechanism with WebDriverWait but for the app, that was too fast... I appended `time.sleep(10)` before start of routine to fix it.
+
+Then I implemented logging to check if it was successfully extracting each city profile of the province. There are some cities in provinces that didn't get extracted properly (Security Error maybe?). I tried a workaround by adding a skip error option and creating a git branch for this fix since at this point, the web app has been used by several users.
 
 After fixing those issues and polishing the web app execution, I finalized it and kept other non-working features disabled in the meantime.
 
-
-You can see [my web app here](https://digicitiesph.streamlit.app/).
+You can try [my web app here](https://digicitiesph.streamlit.app/).
 
 ![](https://i.imgur.com/vOhsxhE.png)
 
-I'll write more in this post later.
+***tl;dr*** I worked on a final project that uses data from the website. Typing manually is hassle so I want to scrape it fast. I tried BeautifulSoup but Selenium worked on dynamic web pages. I used Selenium IDE to record actions on what to scrape from each page and exported to Python script then modified it a bit. I installed WebDriver for Selenium but had version mismatch. Used a Python module to solve this. Made a Streamlit app from tutorials and published it. Python module for latest webdriver replaced with another that works with Streamlit. Disabled features that I can't solved. People used the tool.
