@@ -1,0 +1,24 @@
+title: Test jekyll
+description: Another Jekyll test
+permalink: /:slugified_categories/:title/
+
+date_format: "%b %-d, %Y"
+
+exclude:
+  - "package*.json"
+  - "*.config.js"
+  - netlify.toml
+  - README.md
+  - LICENSE
+  - Makefile
+
+
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
