@@ -13,7 +13,7 @@ For the contents under it, it is structured in `div>ul>li` tags not `table>tr>th
 
 ![](https://i.imgur.com/9PiO8ct.png)
 
-That was tip of the iceberg for data from all the cities in one province has to be gathered, so large province like Cebu with 53 cities / municipalities would be time consuming to manually encode them. 
+That was tip of the iceberg for data from all the cities in one province has to be gathered, so large province like Cebu with 53 cities / municipalities would be time consuming to manually encode them.
 
 ![](https://i.imgur.com/5BUmnzQ.png)
 
@@ -45,13 +45,13 @@ Upon publishing to Community Cloud, the first issue I encountered was Chromium a
 
 I checked the module's source code itself and saw that source for ChromeDriver binaries is outdated and now in newer site with JSON endpoints. I tried figuring it out to keep updated without WDM until I found [chromedriver-py](https://github.com/breuerfelix/chromedriver-py). Its code has the latest site as its source and it worked out. I replaced WDM with it in `requirements.txt` afterwards.
 
-Another issue I encountered was the extraction routine might be so fast it stopped responding after not waiting to load the next city profile page. It already had waiting mechanism with WebDriverWait but for the app, that was too fast... I appended `time.sleep(10)` before start of routine to fix it. 
+Another issue I encountered was the extraction routine might be so fast it stopped responding after not waiting to load the next city profile page. It already had waiting mechanism with WebDriverWait but for the app, that was too fast... I appended `time.sleep(10)` before start of routine to fix it.
 
 Then I implemented logging to check if it was successfully extracting each city profile of the province. There are some cities in provinces that didn't get extracted properly (Security Error maybe?). I tried a workaround by adding a skip error option and creating a git branch for this fix since at this point, the web app has been used by several users.
 
 After fixing those issues and polishing the web app execution, I finalized it and kept other non-working features disabled in the meantime.
 
-You can see [my web app here](https://digicitiesph.streamlit.app/).
+You can try [my web app here](https://digicitiesph.streamlit.app/).
 
 ![](https://i.imgur.com/vOhsxhE.png)
 
